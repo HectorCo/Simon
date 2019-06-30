@@ -6,31 +6,46 @@
 <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-<div id="caja">
-	<ul class="botones">
-		<li>
-			<img style="opacity:0.2" id="botonRojo" alt="" src="img/botonRojo.png">
-		</li>
-		<li>
-			<img style="opacity:0.2" id="botonVerde" alt="" src="img/botonVerde.png">
-		</li>
-	</ul>
-	<ul class="botones">
-		<li>
-			<img style="opacity:0.2" id="botonAzul" alt="" src="img/botonAzul.png">
-		</li>
-		<li>
-			<img style="opacity:0.2" id="botonAmarillo" alt="" src="img/botonAmarillo.png">
-		</li>
-	</ul>
-	<div class="controles">
-			<input type="button" value="Empezar" id="start">
-	</div>
+<header>
+
+	<h1>SIMON GAME</h1>
+
+</header>
+
+<div class="container">
+<div class="juego">
+
+	<button id="rojo" onclick="rojoF();" style="opacity:0.5"></button>
+	<button id="azul" onclick="azulF();" style="opacity:0.5"></button>
 </div>
+<div class="juegoDos">
+	<button id="verde" onclick="verdeF();" style="opacity:0.5"></button>
+	<button id="amarillo" onclick="amarilloF();" style="opacity:0.5"></button>
+</div>		
+
+<div class="redonda">
+	<button id="start" onclick="start();">Start</button>
+</div>
+	
+</div>
+<!-- <div class="controles">
+	<input type="button" value="Empezar" id="start">
+	</div> -->
+
+	<footer class="center">
+		<hr>
+		<span>&copy; Héctor Company Ortega 2019</span>
+	</footer>
+
 <audio id="audioBotonRojo" src="./audio/audioBotonRojo.mp3"></audio>
 <audio id="audioBotonVerde" src="./audio/audioBotonVerde.mp3"></audio>
 <audio id="audioBotonAzul" src="./audio/audioBotonAzul.mp3"></audio>
 <audio id="audioBotonAmarillo" src="./audio/audioBotonAmarillo.mp3"></audio>
 <script type="text/javascript" src="./js/pruebabotones.js"></script>
+
+
+	
+
 </body>
+
 </html>
