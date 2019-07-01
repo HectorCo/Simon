@@ -43,10 +43,11 @@ header {
 }
 
 #start{
-	background-color:#8AA3DD;
-	font-size:28px;
+	background-color:#F7DC6F;
+  font-size: 22px;
+  border-radius: 10%;
 	border:2px solid black;
-	transform: translate(-95px, 100px);
+	transform: translate(-88px, 110px);
 }
 
 .juego {
