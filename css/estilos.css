@@ -124,11 +124,13 @@ header {
   align-items: center;
   margin:0;
   transform: translateX(10px);
+  font-weight: bold;
 }
 .contadorSecuencia p#contador{
 font-size:30px;
+font-weight: bold;
 width:40px;
-background-color:black;
+background-color: #FF4500;
 color:white;
 margin-left:100px;
 }
