@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  margin: 10px;
+  margin: 30px;
   text-align: center;
 }
 
@@ -47,7 +47,7 @@ header {
   font-size: 22px;
   border-radius: 10%;
 	border:2px solid black;
-	transform: translate(-88px, 110px);
+	transform: translate(-85px, 110px);
 }
 
 .juego {
@@ -112,9 +112,23 @@ header {
 }
 
 .center{
-	margin: 100px;
+	margin: 90px;
 }
 
-.presionado{
-  box-shadow: 8px 10px 122px 14px rgba(0,0,0,0.89) inset;
- }
+/* .contadorSecuencia{
+  float:clear;
+} */
+.contadorSecuencia p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  transform: translateX(10px);
+}
+.contadorSecuencia p#contador{
+font-size:30px;
+width:40px;
+background-color:black;
+color:white;
+margin-left:100px;
+}

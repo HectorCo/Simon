@@ -1,9 +1,9 @@
 // Creamos las variables globales
 var numeros = [];
-var numerosUsuario = [];
 var puntuacion = 0;
 var pos = 0;
 var ciclo = "maquina";
+
 
 /* Cuando se hace un click al boton de empezar se inicia la funcion que nos sirve tan para iniciar el
 juego como para resetearlo */
@@ -11,7 +11,6 @@ juego como para resetearlo */
 document.getElementById("start").onclick = function start() {
   numeros.splice(0, numeros.length - 1);
   generarObjeto();
-  console.log(numeros);
   pos = 0;
   play();
 };
@@ -28,13 +27,14 @@ document.getElementById("rojo").onclick = function rojoF() {
   }, 500);
 
   if (ciclo == "usuario") {
-    console.log(ciclo);
+    
     if (numeros[pos] == 1) {
       pos++;
-      puntuacion = puntuacion + 1;
+      
 
       if (pos == numeros.length) {
         ciclo = "maquina";
+        puntuacion = puntuacion + 1;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -42,6 +42,7 @@ document.getElementById("rojo").onclick = function rojoF() {
       }
     } else {
       alert("Game over. Tu puntuación es de : " + puntuacion + " puntos");
+      
     }
   } else {
   }
@@ -58,10 +59,11 @@ document.getElementById("verde").onclick = function verdeF() {
     console.log(ciclo);
     if (numeros[pos] == 2) {
       pos++;
-      puntuacion = puntuacion + 1;
+      
 
       if (pos == numeros.length) {
         ciclo = "maquina";
+        puntuacion = puntuacion + 1;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -85,10 +87,11 @@ document.getElementById("azul").onclick = function azulF() {
     console.log(ciclo);
     if (numeros[pos] == 3) {
       pos++;
-      puntuacion = puntuacion + 1;
+      
 
       if (pos == numeros.length) {
         ciclo = "maquina";
+        puntuacion = puntuacion + 1;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -112,10 +115,11 @@ document.getElementById("amarillo").onclick = function amarilloF() {
     console.log(ciclo);
     if (numeros[pos] == 4) {
       pos++;
-      puntuacion = puntuacion + 1;
+      
 
       if (pos == numeros.length) {
         ciclo = "maquina";
+        puntuacion = puntuacion + 1;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -130,7 +134,7 @@ document.getElementById("amarillo").onclick = function amarilloF() {
 
 /* Función para generar números aleatotios entre 1 y 4 */
 function generarObjeto() {
-  let numero = Math.floor(Math.random() * 4) + 1;
+  let numero = Math.floor(Math.random() * 1) + 1;
   numeros.push(numero);
 }
 
