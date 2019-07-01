@@ -8,10 +8,14 @@ var ciclo = "maquina";
 /* Cuando se hace un click al boton de empezar se inicia la funcion que nos sirve tan para iniciar el
 juego como para resetearlo */
 
-document.getElementById("start").onclick = function start() {
-  numeros.splice(0, numeros.length - 1);
+document.getElementById("start").onclick = function (){
+  numeros.splice(0, numeros.length-1);
   generarObjeto();
   pos = 0;
+  let puntuacion = 0;
+  document.getElementById('contador').innerHTML = "0" + puntuacion;
+  document.getElementById('start').innerHTML = "RESET";
+  console.log(numeros);  
   play();
 };
 
@@ -41,7 +45,10 @@ document.getElementById("rojo").onclick = function rojoF() {
       } else {
       }
     } else {
-      alert("Game over. Tu puntuación es de : " + puntuacion + " puntos");
+      document.getElementById('contador').innerHTML = "0" + puntuacion;
+      document.getElementById('start').innerHTML = "START";
+      
+      alert("GAME OVER");
       
     }
   } else {
@@ -70,7 +77,9 @@ document.getElementById("verde").onclick = function verdeF() {
       } else {
       }
     } else {
-      alert("Game over. Tu puntuación es de : " + puntuacion + " puntos");
+      document.getElementById('contador').innerHTML = "0" + puntuacion;
+      document.getElementById('start').innerHTML = "START";
+      alert("GAME OVER");
     }
   } else {
   }
@@ -98,7 +107,9 @@ document.getElementById("azul").onclick = function azulF() {
       } else {
       }
     } else {
-      alert("Game over. Tu puntuación es de : " + puntuacion + " puntos");
+      document.getElementById('contador').innerHTML = "0" + puntuacion;
+      document.getElementById('start').innerHTML = "START";
+      alert("GAME OVER");
     }
   } else {
   }
@@ -126,7 +137,9 @@ document.getElementById("amarillo").onclick = function amarilloF() {
       } else {
       }
     } else {
-      alert("Game over. Tu puntuación es de : " + puntuacion + " puntos");
+      document.getElementById('contador').innerHTML = "0" + puntuacion;
+      document.getElementById('start').innerHTML = "START";
+      alert("GAME OVER");
     }
   } else {
   }
@@ -134,7 +147,7 @@ document.getElementById("amarillo").onclick = function amarilloF() {
 
 /* Función para generar números aleatotios entre 1 y 4 */
 function generarObjeto() {
-  let numero = Math.floor(Math.random() * 1) + 1;
+  let numero = Math.floor(Math.random() * 4) + 1;
   numeros.push(numero);
 }
 
