@@ -12,10 +12,11 @@ document.getElementById("start").onclick = function () {
   numeros.splice(0, numeros.length);
   generarObjeto();
   pos = 0;
-  let puntuacion = 0;
+  puntuacion = 0;
   document.getElementById('contador').innerHTML = "0" + puntuacion;
   document.getElementById('start').innerHTML = "RESET";
   ciclo = "maquina";
+  
   play();
 };
 
