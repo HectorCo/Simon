@@ -39,6 +39,7 @@ document.getElementById("rojo").onclick = function rojoF() {
       if (pos == numeros.length) {
         ciclo = "maquina";
         puntuacion = puntuacion + 1;
+        document.getElementById('contador').innerHTML = "0" + puntuacion;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -68,6 +69,7 @@ document.getElementById("verde").onclick = function verdeF() {
       if (pos == numeros.length) {
         ciclo = "maquina";
         puntuacion = puntuacion + 1;
+        document.getElementById('contador').innerHTML = "0" + puntuacion;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -96,6 +98,7 @@ document.getElementById("azul").onclick = function azulF() {
       if (pos == numeros.length) {
         ciclo = "maquina";
         puntuacion = puntuacion + 1;
+        document.getElementById('contador').innerHTML = "0" + puntuacion;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
@@ -124,6 +127,7 @@ document.getElementById("amarillo").onclick = function amarilloF() {
       if (pos == numeros.length) {
         ciclo = "maquina";
         puntuacion = puntuacion + 1;
+        document.getElementById('contador').innerHTML = "0" + puntuacion;
         generarObjeto();
         pos = 0;
         setTimeout(play, 1500);
