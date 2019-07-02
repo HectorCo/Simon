@@ -21,7 +21,8 @@ document.getElementById("start").onclick = function () {
 
 /* Las siguientes 4 funciones controlan el comportamiento de los botones cuando el
 usuario los presiona a nivel de sonido y color. También llevan unos bucles if/else
-que regulan el comportamiento de los botones  */
+que regulan el comportamiento de los botones y pintan la puntuación del usuario en
+el HTML */
 
 document.getElementById("rojo").onclick = function rojoF() {
   document.getElementById("rojo").style.opacity = "1";
