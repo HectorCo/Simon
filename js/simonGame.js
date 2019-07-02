@@ -8,6 +8,7 @@ let highScores = document.getElementById('highScores');
 
 
 
+
 /* Cuando se hace un click al boton de empezar se inicia la funcion que nos sirve tan para iniciar el
 juego como para resetearlo */
 
@@ -19,7 +20,6 @@ document.getElementById("start").onclick = function () {
   document.getElementById('contador').innerHTML = "0" + puntuacion;
   document.getElementById('start').innerHTML = "RESET";
   ciclo = "maquina";
-  
   play();
 };
 

@@ -138,3 +138,7 @@ margin-left:100px;
 #highScores-container{
   margin: 20px;
 }
+
+#highscores #li {
+  font-weight: bold;
+}
