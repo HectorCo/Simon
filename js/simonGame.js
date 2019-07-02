@@ -1,5 +1,11 @@
 // Creamos las variables globales
 var numeros = [];
+if (numeros.length>0){
+  numeros = [];
+}
+
+console.log(numeros);
+
 var puntuacion = 0;
 var pos = 0;
 var ciclo = "maquina";
@@ -9,13 +15,23 @@ var ciclo = "maquina";
 juego como para resetearlo */
 
 document.getElementById("start").onclick = function (){
-  numeros.splice(0, numeros.length-1);
+  
+  console.log(numeros);
+  alert('Antes de Vaciar');
+
+  //numeros.splice(0, numeros.length);
+    while(numeros.length > 0) { numeros.pop();  }
+  
+  console.log(numeros);
+  alert('Despues de Vaciar');
+
   generarObjeto();
   pos = 0;
   let puntuacion = 0;
   document.getElementById('contador').innerHTML = "0" + puntuacion;
   document.getElementById('start').innerHTML = "RESET";
   console.log(numeros);  
+  ciclo="maquina";
   play();
 };
 
@@ -154,6 +170,7 @@ function generarObjeto() {
 // Funcion que recorre el array y reproduce la secuencia de sonidos
 
 function play() {
+  console.log(numeros); 
   if (pos < numeros.length) {
     switch (numeros[pos]) {
       case 1:
