@@ -3,6 +3,9 @@ var numeros = [];
 var puntuacion = 0;
 var pos = 0;
 var ciclo = "maquina";
+var player = prompt('¿Cómo te llamas?');
+let highScores = document.getElementById('highScores');
+
 
 
 /* Cuando se hace un click al boton de empezar se inicia la funcion que nos sirve tan para iniciar el
@@ -47,6 +50,7 @@ document.getElementById("rojo").onclick = function rojoF() {
         setTimeout(play, 1500);
       } else {}
     } else {
+      printhighScores();
       document.getElementById('contador').innerHTML = "0" + puntuacion;
       document.getElementById('start').innerHTML = "START";
 
@@ -77,6 +81,7 @@ document.getElementById("verde").onclick = function verdeF() {
         setTimeout(play, 1500);
       } else {}
     } else {
+      printhighScores();
       document.getElementById('contador').innerHTML = "0" + puntuacion;
       document.getElementById('start').innerHTML = "START";
       alert("GAME OVER");
@@ -106,6 +111,7 @@ document.getElementById("azul").onclick = function azulF() {
         setTimeout(play, 1500);
       } else {}
     } else {
+      printhighScores();
       document.getElementById('contador').innerHTML = "0" + puntuacion;
       document.getElementById('start').innerHTML = "START";
       alert("GAME OVER");
@@ -135,6 +141,7 @@ document.getElementById("amarillo").onclick = function amarilloF() {
         setTimeout(play, 1500);
       } else {}
     } else {
+      printhighScores();
       document.getElementById('contador').innerHTML = "0" + puntuacion;
       document.getElementById('start').innerHTML = "START";
       alert("GAME OVER");
@@ -177,4 +184,13 @@ function play() {
     pos = 0;
     ciclo = "usuario";
   }
+}
+
+
+function printhighScores() {
+  let score = (player + ' ' + puntuacion + ' puntos');
+  let listElem = document.createElement('li');
+  let listElemText = document.createTextNode(score);
+  listElem.appendChild(listElemText);
+  highScores.appendChild(listElem);
 }

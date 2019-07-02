@@ -134,3 +134,7 @@ background-color: #FF4500;
 color:white;
 margin-left:100px;
 }
+
+#highScores-container{
+  margin: 20px;
+}
